@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Supplier</title>
+    <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">
+</head>
+<body>
+<h2 class="text-center mb-4">Изменение поставщика</h2>
+
+<form action="/suppliers/update" method="post" th:object="${supplier}">
+    <label>Название: <input type="text" th:field="*{supplierName}" required/></label> <br> <br>
+    ID Пользователя:
+    <select th:field="*{supplierUser}" required>
+        <option th:each="user : ${users}" th:value="${user.id_user}" th:text="${user.userName}"></option>
+    </select><br/>
+    <br> <br>
+    <button type="submit" value="Update" class="add-btn">Изменить</button> <br><br>
+</form>
+<br><hr>
+<br/>
+<center>
+    <div class="navigation">
+        <form method="get">
+            <a href="/suppliers" class="btn btn-success btn-block mb-3 animated-button">
+                Назад
+            </a>
+        </form>
+    </div>
+</center>
+</body>
+</html>
+

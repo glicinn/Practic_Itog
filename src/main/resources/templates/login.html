@@ -1,0 +1,215 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"-->
+<!--      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8"/>-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+<!--  <title>AUTH</title>-->
+<!--  <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<center>-->
+<!--<div class="input-zone">-->
+
+<!--  <form th:action="@{/login}" method="post">-->
+<!--    <h2 class="text-center mb-4">Авторизация</h2>-->
+<!--    <br>-->
+<!--    <label class="input-text"><b>Почта</b></label>-->
+<!--      <br>-->
+<!--      <input type="text" name="username" class="input-log"/>-->
+<!--    <br/><br>-->
+<!--    <label class="input-text"><b>Пароль</b></label>-->
+<!--      <br>-->
+<!--      <input type="password" name="password" class="input-log"/>-->
+<!--      <br/>-->
+<!--    <input type="submit" value="Авторизация"/>-->
+<!--  </form>-->
+<!--    <br>-->
+
+<!--&lt;!&ndash;      <a type="submit" value="Авторизация" class="btn btn-success btn-block mb-3 animated-button">Авторизация</a> <br><br>&ndash;&gt;-->
+
+
+<!--  <center>-->
+<!--    <a th:href="@{/registration}" class="btn btn-success btn-block mb-3 animated-button">Регистрация</a> <br><br>-->
+<!--  </center>-->
+
+<!--&lt;!&ndash;  <a th:href="@{/registration}">Регистрация</a>&ndash;&gt;-->
+<!--</div>-->
+<!--</center>-->
+<!--&lt;!&ndash; Дополнительный контент или скрипты могут быть добавлены здесь &ndash;&gt;-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AUTH</title>
+    <style>
+
+        table{
+            border-style: ridge;
+            border-width: 0px; /* Толщина границы */
+            padding: 7px; /* Поля вокруг текста */
+        }
+
+        tr{
+            border-style: ridge;
+            border-width: 1px; /* Толщина границы */
+            padding: 7px; /* Поля вокруг текста */
+        }
+
+        td{
+            border-style: ridge;
+            border-width: 1px; /* Толщина границы */
+            padding: 7px; /* Поля вокруг текста */
+        }
+
+        th{
+            border-style: ridge;
+            border-width: 1px; /* Толщина границы */
+            padding: 7px; /* Поля вокруг текста */
+        }
+
+        .input-zone{
+            background-color: white;
+            border: 1px solid lightgray;
+            border-radius: 20px;
+            width: 50%;
+            /* height: 500px; */
+            height: 400px;
+            color: black;
+            margin-right: 2%;
+            text-align: center;
+            display: grid;
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
+
+        .input-text{
+            font-family: 'Avenir', sans-serif;
+            margin: 5px;
+        }
+
+        .input-log{
+            width: 500px;
+            height: 20px;
+            font-family: 'Avenir', sans-serif;
+            padding: 5px;
+        }
+
+        .navigation{
+            width: 100%;
+            align-content: center;
+            padding: 20px;
+        }
+
+        .feedback-input{
+            width: 500px;
+            height: 30px;
+        }
+
+        .main-body {
+            font-family: 'Avenir', sans-serif;
+            padding-top: 10px;
+            background-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Avenir', sans-serif;
+            padding-top: 20px;
+            background-color: #f8f9fa;
+        }
+
+
+        .animated-button {
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            background-color: #483D8B;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 500px;
+            height: 30px;
+        }
+
+        .animated-button:hover {
+            transform: scale(1.1);
+        }
+
+        .add-btn {
+            border: 0;
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            background-color: #483D8B;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 200px;
+            height: 45px;
+        }
+
+        .add-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .border-null{
+            border: 0;
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            background-color: #483D8B;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 520px;
+            height: 50px;
+        }
+
+        .border-null:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+<center><div class="input-zone">
+    <h1 class="text-center mb-4">Авторизация</h1>
+    <form th:action="@{/login}" method="post">
+        <label><b>Логин</b><br><input type="text" name="username" class="input-log"/></label><br>
+        <br/>
+        <label><b>Пароль</b><br><input type="password" name="password" class="input-log"/></label><br>
+        <br/>
+        <br>
+        <input type="submit" value="Авторизация" class="border-null"/>
+    </form>
+    <center><a th:href="@{/registration}" class="btn btn-success btn-block mb-3 animated-button">Регистрация</a></center>
+</div></center>
+
+<!-- Дополнительный контент или скрипты могут быть добавлены здесь -->
+
+</body>
+</html>

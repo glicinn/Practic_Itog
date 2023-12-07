@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Льготы</title>
+    <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">
+</head>
+<body>
+
+<h2 class="text-center mb-4">Список льгот</h2>
+<br>
+<center>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Discount</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="benefit : ${benefits}">
+            <td th:text="${benefit.id_benefit}"></td>
+            <td th:text="${benefit.benefitName}"></td>
+            <td th:text="${benefit.benefitDiscount}"></td>
+            <td>
+                <a th:href="@{/benefits/update/{id}(id=${benefit.id_benefit})}">Update</a>
+                <a th:href="@{/benefits/delete/{id}(id=${benefit.id_benefit})}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</center>
+<br><br>
+
+<center>
+    <a href="/benefits/create" class="add-btn">Добавить льготу</a> <br><br>
+</center>
+
+<hr><br>
+
+<center>
+    <div class="navigation">
+        <form method="get">
+            <a href="/" class="btn btn-success btn-block mb-3 animated-button">
+                Назад
+            </a>
+        </form>
+    </div>
+</center>
+
+
+</body>
+</html>

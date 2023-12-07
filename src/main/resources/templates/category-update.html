@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Benefit</title>
+    <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">
+</head>
+<body>
+<h2 class="text-center mb-4">Изменение категории</h2>
+
+<form action="/categorys/update" method="post" th:object="${category}">
+    <label>Название: <input type="text" th:field="*{categoryName}" required/></label> <br> <br>
+    <label>Возрастное ограничение:  <input type="text" th:field="*{ageLimit}" required/></label> <br> <br>
+    <br> <br>
+    <button type="submit" value="Update" class="add-btn">Изменить</button> <br><br>
+</form>
+<br><hr>
+<br/>
+<center>
+    <div class="navigation">
+        <form method="get">
+            <a href="/categorys" class="btn btn-success btn-block mb-3 animated-button">
+                Назад
+            </a>
+        </form>
+    </div>
+</center>
+</body>
+</html>
+

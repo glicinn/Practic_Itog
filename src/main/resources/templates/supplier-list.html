@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Поставщик</title>
+  <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">
+</head>
+<body>
+
+<h2 class="text-center mb-4">Список поставщиков</h2>
+<br>
+<center>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>User ID</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="supplier : ${suppliers}">
+      <td th:text="${supplier.id_supplier}"></td>
+      <td th:text="${supplier.supplierName}"></td>
+      <td th:text="${supplier.supplierUser}"></td>
+      <td>
+        <a th:href="@{/suppliers/update/{id}(id=${supplier.id_supplier})}">Update</a>
+        <a th:href="@{/suppliers/delete/{id}(id=${supplier.id_supplier})}">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</center>
+<br><br>
+
+<center>
+  <a href="/suppliers/create" class="add-btn">Добавить поставщика</a> <br><br>
+</center>
+
+<hr><br>
+
+<center>
+  <div class="navigation">
+    <form method="get">
+      <a href="/" class="btn btn-success btn-block mb-3 animated-button">
+        Назад
+      </a>
+    </form>
+  </div>
+</center>
+
+
+</body>
+</html>

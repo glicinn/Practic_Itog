@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+    <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">
+</head>
+<body>
+<h2 class="text-center mb-4">Изменение товара</h2>
+
+<form action="/products/update" method="post" th:object="${product}">
+    <label>Название: <input type="text" th:field="*{productName}" required/></label> <br> <br>
+    <label>Описание: <input type="text" th:field="*{productDescription}" required/></label> <br> <br>
+    <label>Фото: <input type="text" th:field="*{productPhoto}" required/></label> <br> <br>
+    <label>Цена: <input type="text" th:field="*{productPrice}" required/></label> <br> <br>
+    <!--    <label>ID Поставщика:  <input type="text" th:field="*{productSupplier}" required/></label>-->
+    ID Поставщика:
+    <select th:field="*{productSupplier}" required>
+        <option th:each="supplier : ${suppliers}" th:value="${supplier.id_supplier}" th:text="${supplier.supplierName}"></option>
+    </select><br> <br>
+    <!--    <label>ID Категории:  <input type="text" th:field="*{productCategory}" required/></label>-->
+    ID Категории:
+    <select th:field="*{productCategory}" required>
+        <option th:each="category : ${categorys}" th:value="${category.id_category}" th:text="${category.categoryName}"></option>
+    </select><br> <br>
+    <br> <br>
+    <button type="submit" value="Update" class="add-btn">Изменить</button> <br><br>
+</form>
+<br><hr>
+<br/>
+<center>
+    <div class="navigation">
+        <form method="get">
+            <a href="/products" class="btn btn-success btn-block mb-3 animated-button">
+                Назад
+            </a>
+        </form>
+    </div>
+</center>
+</body>
+</html>
+

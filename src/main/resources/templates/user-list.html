@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пользователи</title>
+    <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">
+</head>
+<body>
+
+<h2 class="text-center mb-4">Список пользователей</h2>
+<br>
+<center>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id_user}"></td>
+        <td th:text="${user.userName}"></td>
+        <td th:text="${user.userAge}"></td>
+        <td th:text="${user.email}"></td>
+        <td th:text="${user.password}"></td>
+        <td th:text="${user.role}"></td>
+        <td>
+            <a th:href="@{/users/update/{id}(id=${user.id_user})}">Update</a>
+            <a th:href="@{/users/delete/{id}(id=${user.id_user})}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</center>
+<br><br>
+
+<center>
+<a href="/users/create" class="add-btn">Добавить пользователя</a> <br><br>
+</center>
+
+<hr><br>
+
+<center>
+    <div class="navigation">
+        <form method="get">
+            <a href="/" class="btn btn-success btn-block mb-3 animated-button">
+                Назад
+            </a>
+        </form>
+    </div>
+</center>
+
+
+</body>
+</html>

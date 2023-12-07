@@ -1,0 +1,653 @@
+
+@import url('site.css');
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@font-face {
+    font-family: 'Snell Roundhand Script';
+    src: url('fonts/snell-roundhand-script.ttf');
+    src: url('fonts/snell-roundhand-script.ttf?#iefix') format('embedded-opentype'), url('../fonts/snell-roundhand-script.woff') format('woff'), url('fonts/snell-roundhand-script.ttf') format('truetype'), url('../fonts/snell-roundhand-script.svg#Snell Roundhand Script') format('svg');
+}
+
+h2 {
+    font-family: 'Snell Roundhand Script';
+}
+
+h2{
+    font-family:'Times New Roman', Times, serif;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: url('fonts/avenirnextcyr-light.ttf');
+    src: url('fonts/avenirnextcyr-light.ttf?#iefix') format('embedded-opentype'), url('../fonts/avenirnextcyr-light.woff') format('woff'), url('fonts/avenirnextcyr-light.ttf') format('truetype'), url('../fonts/avenirnextcyr-light.svg#Snell Roundhand Script') format('svg');
+}
+
+a {
+    font-family: 'Avenir Next Cyr';
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    background-position: top;
+    margin: 0%;
+    padding: 0px;
+    height: 60px;
+    padding-left: 10%;
+    padding-right: 10%;
+    /*position: fixed;
+    width: 100%;*/
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: rgb(29, 29, 29);
+    color: white;
+    padding-top: 50px;
+    padding-left: 8%;
+    padding-bottom: 25px;
+    
+}
+
+.lefttext {
+    float: left; /* ¬ыравнивание по правому краю */
+    margin: 0 0 5px 5px; /* ќтступы вокруг фотографии */
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-left: 20px;
+    color: rgb(43, 43, 43);
+    text-decoration: none;
+    /*margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;*/
+}
+
+
+
+    .lefttext:visited {
+        color: rgb(43, 43, 43); /* ÷вет посещЄнной ссылки */
+    }
+
+    /*.lefttext:hover {*/
+    /*    color: #CE242B; !* ÷вет ссылки при наведении *!*/
+    /*    text-decoration: none; !* ƒобавл€ем подчЄркивание *!*/
+    /*}*/
+
+    .lefttext:hover {
+        color: #483D8B; /* ÷вет ссылки при наведении */
+        text-decoration: none; /* ƒобавл€ем подчЄркивание */
+    }
+
+.iconleft {
+    float: left; /* ¬ыравнивание по правому краю */
+    margin: 0 0 5px 5px; /* ќтступы вокруг фотографии */
+/*    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;*/
+}
+
+.iconright {
+    float: right; /* ¬ыравнивание по правому краю */
+    margin: 0 0 5px 5px; /* ќтступы вокруг фотографии */
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cursive-text{
+    color: #483D8B;
+}
+
+.rightpic {
+    float: right; /* ¬ыравнивание по правому краю */
+    margin: 0 0 0 0; /* ќтступы вокруг фотографии */
+
+}
+
+.leftpic {
+    float: left; /* ¬ыравнивание по правому краю */
+    margin: 0 0 0 0; /* ќтступы вокруг фотографии */
+
+}
+
+.righttext {
+    float: right; /* ¬ыравнивание по правому краю */
+    margin: 0 0 5px 5px; /* ќтступы вокруг фотографии */
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.graydiv {
+    margin-top: 20px;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.wrapper {
+    display: grid;
+}
+
+
+
+.line {
+    display: inline-block;
+}
+
+/*.leftinfo {*/
+/*    float: left; !* ¬ыравнивание по правому краю *!*/
+/*    margin: 0 0 0 0; !* ќтступы вокруг фотографии *!*/
+/*    background-image: url('images/infofon2.jpg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    width: 50%;*/
+/*    height: 100%;*/
+/*    text-align: left;*/
+/*    vertical-align: central;*/
+/*    padding-right: 12%;*/
+/*    padding-top: 20%;*/
+/*    padding-left: 10%;*/
+/*}*/
+
+.leftinfo {
+    float: left; /* ¬ыравнивание по правому краю */
+    margin: 0 0 0 0; /* ќтступы вокруг фотографии */
+    background-image: url('images/purplebackleft.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    vertical-align: central;
+    padding-right: 12%;
+    padding-top: 20%;
+    padding-left: 10%;
+}
+
+/*.rightinfo {*/
+/*    float: right; !* ¬ыравнивание по правому краю *!*/
+/*    margin: 0 0 0 0; !* ќтступы вокруг фотографии *!*/
+/*    background-image: url('images/infofon3.jpg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    width: 50%;*/
+/*    height: 100%;*/
+/*    text-align: left;*/
+/*    vertical-align: central;*/
+/*    padding-left: 12%;*/
+/*    padding-top: 20%;*/
+/*    padding-right: 10%;*/
+/*}*/
+
+
+.rightinfo {
+    float: right; /* ¬ыравнивание по правому краю */
+    margin: 0 0 0 0; /* ќтступы вокруг фотографии */
+    background-image: url('images/purplebackright.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    vertical-align: central;
+    padding-left: 12%;
+    padding-top: 20%;
+    padding-right: 10%;
+}
+
+
+
+.coc1 {
+    background-image: url('images/coc2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: 200px;
+    color: white;
+    margin-right: 2%;
+    margin-left: 3%;
+    float: left;
+    text-align: center;
+    display: grid;
+    align-items: end;
+    padding-bottom: 1%;
+    cursor: pointer;
+    padding-top: 10%;
+}
+
+.coc2 {
+    background-image: url('images/coc1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: 200px;
+    color: white;
+    margin-right: 2%;
+    float: left;
+    text-align: center;
+    display: grid;
+    align-items: end;
+    padding-bottom: 1%;
+    cursor: pointer;
+    padding-top: 10%;
+}
+
+
+.coc3 {
+    background-image: url('images/coc3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: 200px;
+    color: white;
+    margin-right: 2%;
+    float: left;
+    text-align: center;
+    display: grid;
+    align-items: end;
+    padding-bottom: 1%;
+    cursor: pointer;
+    padding-top: 10%;
+}
+
+/*.cocbut {*/
+/*    background-color: firebrick;*/
+/*    color: white;*/
+/*    border-radius: 5px;*/
+/*    width: auto;*/
+/*    height: 30px;*/
+/*    outline: none;*/
+/*    border: 0px;*/
+/*    cursor: pointer;*/
+/*    align-content: center;*/
+/*    padding-bottom: 5px;*/
+/*    padding-left: 15px;*/
+/*    padding-right: 15px;*/
+/*}*/
+
+
+.cocbut {
+    background-color: #483D8B;
+    color: white;
+    border-radius: 5px;
+    width: auto;
+    height: 30px;
+    outline: none;
+    border: 0px;
+    cursor: pointer;
+    align-content: center;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+h5 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+td{
+    width: 200px;
+    height: 25px;
+}
+
+
+.menuprod {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    width: 14%;
+    /* height: 500px; */
+    height: 300px;
+    color: black;
+    margin-right: 2%;
+    float: left;
+    text-align: center;
+    display: grid;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.tovtext {
+    border-radius: 10px;
+    color: rgb(59, 59, 59);
+    text-decoration: none;
+    /*margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;*/
+}
+
+
+
+    .tovtext:visited {
+        color: rgb(59, 59, 59); /* ÷вет посещЄнной ссылки */
+    }
+
+    .tovtext:hover {
+        color: rgb(128, 128, 128); /* ÷вет ссылки при наведении */
+        text-decoration: none; /* ƒобавл€ем подчЄркивание */
+    }
+
+
+.tovimg{
+    margin-top: 0px;
+}
+
+/*.cartbut {*/
+/*    background-color: firebrick;*/
+/*    color: white;*/
+/*    border-radius: 5px;*/
+/*    width: 50%;*/
+/*    outline: none;*/
+/*    border: 0px;*/
+/*    cursor: pointer;*/
+/*    align-content: center;*/
+/*    padding-bottom:5px;*/
+/*}*/
+
+.cartbut {
+    background-color: #483D8B;
+    color: white;
+    border-radius: 5px;
+    width: 50%;
+    outline: none;
+    border: 0px;
+    cursor: pointer;
+    align-content: center;
+    padding-bottom:5px;
+}
+
+
+.winname {
+   /* background-image: url('../images/winname.png');*/
+   background-color: black;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    vertical-align: central;
+    color: white;
+}
+
+.blackdiv {
+    margin-top: 20px;
+    width: 100%;
+    background-color: black;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+}
+
+
+
+
+.leftmenuinfo {
+    float: left; /* ¬ыравнивание по правому краю */
+    margin: 0 0 0 0; /* ќтступы вокруг фотографии */
+    background-color: rgb(235, 235, 235);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    text-align: left;
+    vertical-align: central;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+.rightmenuinfo {
+    float: right; /* ¬ыравнивание по правому краю */
+    margin: 0 0 0 0; /* ќтступы вокруг фотографии */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60%;
+    height: 100%;
+    text-align: left;
+    vertical-align: central;
+    padding-left: 3%;
+    padding-top: 20px;
+    padding-right: 3%;
+    margin-bottom: 4%;
+
+}
+
+.product {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    width: 30%;
+    height: 310px;
+    color: black;
+    margin-right: 3%;
+    float: left;
+    text-align: center;
+    display: grid;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 3%;
+}
+
+
+.prodwintext {
+    float: left; /* ¬ыравнивание по правому краю */
+    margin: 0 0 5px 5px; /* ќтступы вокруг фотографии */
+    border-radius: 10px;
+    color: rgb(43, 43, 43);
+    text-decoration: none;
+    margin-bottom: 10px;
+    /*margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;*/
+}
+
+
+
+    .prodwintext:visited {
+        color: rgb(43, 43, 43); /* ÷вет посещЄнной ссылки */
+    }
+
+    /*.prodwintext:hover {*/
+    /*    color: #CE242B; !* ÷вет ссылки при наведении *!*/
+    /*    text-decoration: none; !* ƒобавл€ем подчЄркивание *!*/
+    /*}*/
+
+    .prodwintext:hover {
+        color: #483D8B; /* ÷вет ссылки при наведении */
+        text-decoration: none; /* ƒобавл€ем подчЄркивание */
+    }
+
+.footertext {
+ 
+    color: white;
+    text-decoration: none;
+    /*margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;*/
+}
+
+    .footertext:visited {
+    color: white; /* ÷вет посещЄнной ссылки */
+}
+
+.footertext:hover {
+    color: white; /* ÷вет ссылки при наведении */
+    text-decoration: none; /* ƒобавл€ем подчЄркивание */
+}
+
+.neob {
+    background-color: rgb(219, 188, 131);
+    color: rgb(59, 59, 59);
+    width: 90%;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 5px;
+    padding-top: 12px;
+}
+
+
+.leftlog {
+    float: left; /* ¬ыравнивание по правому краю */
+    margin: 0 0 0 0; /* ќтступы вокруг фотографии */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 33%;
+    height: 100%;
+    text-align: left;
+    vertical-align: central;
+    padding-right: 2%;
+    padding-top: 2%;
+    margin-top: 3%;
+    padding-bottom: 2%;
+    margin-bottom : 3%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    margin-left: 16%;
+    border-right: 1px solid darkgray;
+}
+
+.rightlog {
+    float: right; /* ¬ыравнивание по правому краю */
+    margin: 0 0 0 0; /* ќтступы вокруг фотографии */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 33%;
+    height: 100%;
+    text-align: left;
+    vertical-align: central;
+    padding-right: 2%;
+    padding-top: 2%;
+    margin-top: 3%;
+    padding-bottom: 2%;
+    margin-bottom: 3%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    margin-right: 16%;
+}
+
+/*.logbut {*/
+/*    background-color: firebrick;*/
+/*    color: white;*/
+/*    border-radius: 5px;*/
+/*    width: 100%;*/
+/*    height: 35px;*/
+/*    outline: none;*/
+/*    border: 0px;*/
+/*    cursor: pointer;*/
+/*    align-content: center;*/
+/*    padding-bottom: 5px;*/
+/*}*/
+
+
+.logbut {
+    background-color: #483D8B;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: 0px;
+    cursor: pointer;
+    align-content: center;
+    padding-bottom: 5px;
+}
+
+.log2but {
+    background-color: lightgray;
+    color: Black;
+    border-radius: 5px;
+    width: auto;
+    height: 35px;
+    outline: none;
+    border: 0px;
+    cursor: pointer;
+    align-content: center;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.centerdiv {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/*.cartbut {*/
+/*    background-color: firebrick;*/
+/*    color: white;*/
+/*    border-radius: 5px;*/
+/*    width: auto;*/
+/*    height: 35px;*/
+/*    outline: none;*/
+/*    border: 0px;*/
+/*    cursor: pointer;*/
+/*    align-content: center;*/
+/*    padding-bottom: 5px;*/
+/*    padding-left: 20px;*/
+/*    padding-right: 20px;*/
+/*}*/
+
+
+.cartbut {
+    background-color: #483D8B;
+    color: white;
+    border-radius: 5px;
+    width: auto;
+    height: 35px;
+    outline: none;
+    border: 0px;
+    cursor: pointer;
+    align-content: center;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.product-button {
+    background-color: #483D8B;
+    color: white;
+    border-radius: 10px;
+    width: auto;
+    height: 35px;
+    outline: none;
+    border: 0px;
+    cursor: pointer;
+    align-content: center;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.histdiv {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+}

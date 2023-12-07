@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товар</title>
+    <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">
+</head>
+<body>
+
+<h2 class="text-center mb-4">Список товаров</h2>
+<br>
+<center>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Photo</th>
+            <th>Price</th>
+            <th>Supplier ID</th>
+            <th>Category ID</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.id_product}"></td>
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.productDescription}"></td>
+            <td th:text="${product.productPhoto}"></td>
+            <td th:text="${product.productPrice}"></td>
+            <td th:text="${product.productSupplier}"></td>
+            <td th:text="${product.productCategory}"></td>
+            <td>
+                <a th:href="@{/products/update/{id}(id=${product.id_product})}">Update</a>
+                <a th:href="@{/products/delete/{id}(id=${product.id_product})}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</center>
+<br><br>
+
+<center>
+    <a href="/products/create" class="add-btn">Добавить товар</a> <br><br>
+</center>
+
+<hr><br>
+
+<center>
+    <div class="navigation">
+        <form method="get">
+            <a href="/" class="btn btn-success btn-block mb-3 animated-button">
+                Назад
+            </a>
+        </form>
+    </div>
+</center>
+
+
+</body>
+</html>

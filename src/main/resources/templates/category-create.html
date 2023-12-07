@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Benefit</title>
+    <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">
+</head>
+<body>
+<h2 class="text-center mb-4">Добавление категории</h2>
+
+<form action="/categorys/create" method="post" th:object="${category}">
+    <label>Название: <input type="text" th:field="*{categoryName}" required/></label> <br> <br>
+    <label>Возрастное ограничение:  <input type="text" th:field="*{ageLimit}" required/></label> <br> <br>
+
+    <button type="submit" value="Create" class="add-btn">Добавить</button> <br><br>
+</form>
+
+<!--<form action="/users/create" method="post" th:object="${user}">-->
+<!--    Name: <input type="text" th:field="*{userName}" required/><br/>-->
+<!--    Age: <input type="text" th:field="*{userAge}" required/><br/>-->
+<!--    Email: <input type="text" th:field="*{email}" required/><br/>-->
+<!--    Password: <input type="text" th:field="*{password}" required/><br/>-->
+<!--    Role: <select th:field="*{role}" required>-->
+<!--    <option value="user">User</option>-->
+<!--    <option value="admin">Admin</option>-->
+<!--    <option value="employee">Employee</option>-->
+<!--</select><br/>-->
+<!--    <input type="submit" value="Create"/>-->
+<!--</form>-->
+<br><hr>
+<br/>
+<center>
+    <div class="navigation">
+        <form method="get">
+            <a href="/categorys" class="btn btn-success btn-block mb-3 animated-button">
+                Назад
+            </a>
+        </form>
+    </div>
+</center>
+</body>
+</html>

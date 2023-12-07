@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Роли</title>
+  <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">
+</head>
+<body>
+
+<h2 class="text-center mb-4">Список ролей</h2>
+<br>
+<center>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="role : ${roles}">
+      <td th:text="${role.id_role}"></td>
+      <td th:text="${role.roleName}"></td>
+      <td>
+        <a th:href="@{/roles/update/{id}(id=${role.id_role})}">Update</a>
+        <a th:href="@{/roles/delete/{id}(id=${role.id_role})}">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</center>
+<br><br>
+
+<center>
+  <a href="/roles/create" class="add-btn">Добавить роль</a> <br><br>
+</center>
+
+<hr><br>
+
+<center>
+  <div class="navigation">
+    <form method="get">
+      <a href="/" class="btn btn-success btn-block mb-3 animated-button">
+        Назад
+      </a>
+    </form>
+  </div>
+</center>
+
+
+</body>
+</html>

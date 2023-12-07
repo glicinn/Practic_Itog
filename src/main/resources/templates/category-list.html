@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Категории</title>
+  <link rel="stylesheet" href="src/main/resources/static/styles.css" th:href="@{/styles.css}">
+</head>
+<body>
+
+<h2 class="text-center mb-4">Список категорий</h2>
+<br>
+<center>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age Limit</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="category : ${categorys}">
+      <td th:text="${category.id_category}"></td>
+      <td th:text="${category.categoryName}"></td>
+      <td th:text="${category.ageLimit}"></td>
+      <td>
+        <a th:href="@{/categorys/update/{id}(id=${category.id_category})}">Update</a>
+        <a th:href="@{/categorys/delete/{id}(id=${category.id_category})}">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</center>
+<br><br>
+
+<center>
+  <a href="/categorys/create" class="add-btn">Добавить категорию</a> <br><br>
+</center>
+
+<hr><br>
+
+<center>
+  <div class="navigation">
+    <form method="get">
+      <a href="/" class="btn btn-success btn-block mb-3 animated-button">
+        Назад
+      </a>
+    </form>
+  </div>
+</center>
+
+
+</body>
+</html>
